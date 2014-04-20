@@ -1,0 +1,311 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+
+        <title>GeneRally Tools by @resir014 &mdash; GeneRally Calculator</title>
+        <meta name="description" content="Web tools for the freeware, top-down racing game, GeneRally." />
+        <meta name="keywords" content="generally, gaming" />
+        <meta name="copyright" content="2014 Resi Respati" />
+
+        <link rel="author" href="http://resir014.github.io/generally-tools/humans.txt" />
+        <link rel="canonical" href="http://resir014.github.io/generally-tools/" />
+
+        <meta name="revisit-after" content="30" />
+
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/css/font-awesome.min.css" />
+
+        <!-- Custom styles -->
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic" />
+
+        <!--[if lt IE 9]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <div class="container">
+                <a class="navbar-brand" href="http://resir014.github.io/generally-tools/">GeneRally Tools</a>
+                <p class="navbar-text navbar-right">Designed by <a href="http://resir014.github.io/" class="navbar-link">resir014</a></p>
+            </div>
+        </nav>
+
+        <header id="main-header">
+            <div class="container">
+                <h1>GeneRally Physics Calculator</h1>
+                <p>Use this simple tool to generate a realistic, scaled-down attributes for your GeneRally car files.</p>
+                <p>Inspired by <a href="http://forum.generally-racers.com/viewtopic.php?f=9&t=302" target="_blank">Haruna's Realistic Car Physics</a>.</p>
+            </div>
+        </header>
+
+        <section id="inputs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h3>Car Statistics</h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="inputPower">Power</label>
+                                <input type="text" placeholder="in bhp/hp" class="form-control input-sm" id="inputPower" value="" />
+                            </div>
+                            <div class="form-group">
+                                <label for="inputWeight">Weight</label>
+                                <input type="text" placeholder="in kg" class="form-control input-sm" id="inputWeight" value="" />
+                            </div>
+                            <div class="form-group">
+                                <label for="inputTopSpeed">Top speed</label>
+                                <input type="text" placeholder="in km/h" class="form-control input-sm" id="inputTopSpeed" value="" />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-sm-3">
+                        <h3>Downforce</h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="inputDownforce">Downforce value</label>
+                                <input type="text" class="form-control input-sm" id="inputDownforce" value="" />
+                            </div>
+                            <div class="form-group">
+                                <label for="inputAirResistance">Drag coefficient</label>
+                                <input type="text" placeholder="0.27 - 0.5" class="form-control input-sm" id="inputAirResistance" value="" />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-sm-3">
+                        <h3>Tyres</h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="inputTyreWidthFront">Front tyre width</label>
+                                <input type="text" placeholder="in mm" class="form-control input-sm" id="inputTyreWidthFront" value="" />
+                            </div>
+                            <div class="form-group">
+                                <label for="inputTyreWidthRear">Rear tyre width</label>
+                                <input type="text" placeholder="in mm" class="form-control input-sm" id="inputTyreWidthRear" value="" />
+                            </div>
+                            <div class="form-group">
+                                <label for="inputTyreQuality">Tyre compound</label>
+                                <select id="inputTyreQuality" class="form-control">
+                                    <option value="">Select&hellip;</option>
+                                    <option value="1">Economy</option>
+                                    <option value="2">Comfort</option>
+                                    <option value="3">Road</option>
+                                    <option value="4">Sport</option>
+                                    <option value="5">Super</option>
+                                    <option value="6">Semi-Slick</option>
+                                    <option value="7">Racing Slick Hard</option>
+                                    <option value="8">Racng Slick Medium</option>
+                                    <option value="9">Racing Slick Soft</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputDrivetrain">Drivetrain</label>
+                                <select id="inputDrivetrain" class="form-control">
+                                    <option value="">Select&hellip;</option>
+                                    <option value="1">Front-wheel drive</option>
+                                    <option value="2">Rear-wheel drive</option>
+                                    <option value="3">4-wheel drive</option>
+                                </select>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="isHistoric" /> Historic tyres
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-sm-3">
+                        <h3>How to use</h3>
+                        <p class="help-block">First, enter the real-life attributes of your car. Then click the "Calculate physics" button and it will calculate the scaled GR physics, rounded down to two decimal places.</p>
+                        <p class="help-block">A reference table for the Downforce values is available <a href="/downforce-reference">here</a>.</p>
+                        <p class="help-block">If you run into an issue, please file an issue report on GitHub or on the GRIF thread.</p>
+                    </div>
+                </div>
+
+                <div class="btn-wrapper">
+                    <button class="btn btn-primary btn-block btn-lg" id="calculate">Calculate physics</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="ce-values">
+            <div class="container">
+                <h2>Car Editor Values</h2>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h3>Performance values</h3>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Attribute</th> <th>Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Air Resistance</td> <td id="airResistance" class="results"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Downforce/Wings</td> <td id="downforce" class="results"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Power</td> <td id="power" class="results"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Top Speed</td> <td id="topSpeed" class="results"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sliding</td> <td id="sliding" class="results"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mass</td> <td id="weight" class="results"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Balance(Max)</td> <td id="balanceMax" class="results"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Balance(Min)</td> <td id="balanceMin" class="results"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <h3>Grip values</h3>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Surface type</th> <th>Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Oil</td> <td id="gripOil" class="results"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tarmac</td> <td id="gripTarmac1" class="results"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tarmac 2</td> <td id="gripTarmac2" class="results"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Grass</td> <td id="gripGrass" class="results"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mud</td> <td id="gripMud" class="results"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gravel</td> <td id="gripGravel1" class="results"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gravel 2</td> <td id="gripGravel2" class="results"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sand</td> <td id="gripSand1" class="results"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sand 2</td> <td id="gripSand2" class="results"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Snow</td> <td id="gripSnow" class="results"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ice</td> <td id="gripIce" class="results"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kerb</td> <td id="gripKerb1" class="results"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kerb 2</td> <td id="gripKerb2" class="results"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loose gravel</td> <td id="gripLooseGravel" class="results"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <h3>Slowdown values</h3>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Surface type</th> <th>Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Oil</td> <td id="slowdownOil" class="results"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tarmac</td> <td id="slowdownTarmac1" class="results"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tarmac 2</td> <td id="slowdownTarmac2" class="results"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Grass</td> <td id="slowdownGrass" class="results"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mud</td> <td id="slowdownMud" class="results"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gravel</td> <td id="slowdownGravel1" class="results"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gravel 2</td> <td id="slowdownGravel2" class="results"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sand</td> <td id="slowdownSand1" class="results"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sand 2</td> <td id="slowdownSand2" class="results"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Snow</td> <td id="slowdownSnow" class="results"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ice</td> <td id="slowdownIce" class="results"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kerb</td> <td id="slowdownKerb1" class="results"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kerb 2</td> <td id="slowdownKerb2" class="results"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loose gravel</td> <td id="slowdownLooseGravel" class="results"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <div class="container">
+                <p>Designed and developed by <a href="http://resir014.github.io" target="_blank">resir014</a>. Licensed under <a href="https://github.com/resir014/generally-tools/blob/gh-pages/LICENSE" rel="license" target="_blank">MIT</a>.</p>
+                <p>GeneRally is a fun top-down arcade racing game. You can check their website <a href="http://gene-rally.com/" target="_blank">here</a>.</p>
+                <p><a href="https://github.com/resir014/generally-tools" target="_blank">Fork on GitHub</a>.</p>
+            </div>
+        </footer>
+
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/js/physics-calculator.js"></script>
+    </body>
+</html>

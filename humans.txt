@@ -1,0 +1,22 @@
+/* TEAM */
+    Designer: Resi Respati
+    Site: http://resir014.github.io/
+    Twitter: @resir014
+    Location: Jakarta, Indonesia.
+
+/* THANKS */
+   Normalize: Nicolas Gallagher
+   Site: http://necolas.github.io/normalize.css/
+
+   Bootstrap: Twitter, Inc.
+   Twitter: @TwBootstrap
+   Site: http://getbootstrap.com
+
+   Stovetop: Alex "South Paw" Gabites
+   Twitter: @SouthPawNZ
+   Site: http://southpaw.co.nz/
+
+/* SITE */
+    Last update: 2004/04/20
+    Doctype: HTML5
+    IDE: Brackets, GitHub
