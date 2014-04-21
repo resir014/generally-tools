@@ -2,7 +2,7 @@
 
 Web-based tools for the freeware top-down racing game, GeneRally.
 
-[Visit the page.](http://resir014.github.io/generally-tools/)
+[Try it out here.](http://resir014.github.io/generally-tools/)
 
 ## Car Physics Calculator
 
@@ -16,7 +16,7 @@ First, enter the real-life attributes of your car. Then click the "Calculate phy
 
 A reference table for the Downforce values is available [here](http://resir014.github.io/generally-tools/downforce-reference/).
 
-If you run into an issue, please file an issue report on GitHub or just on the GRIF thread.
+If you run into an issue, please [file an issue report on GitHub](https://github.com/resir014/generally-tools/issues) or on the [GRIF thread](http://forum.generally-racers.com/viewtopic.php?f=8&t=4082).
 
 ## License
 
