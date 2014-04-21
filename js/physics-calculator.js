@@ -59,7 +59,6 @@ $(document).ready(function() {
         var s = (0).toFixed(1);
 
         // Balance
-        var bal;
         function balance(twf, twr, w) {
             var tw = twf / twr;
             var bal = ((tw)*1.4) - (w*0.0005);
