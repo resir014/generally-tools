@@ -60,8 +60,7 @@ $(document).ready(function() {
 
         // Balance
         function balance(twf, twr, w) {
-            var tw = twf / twr;
-            var bal = ((tw)*1.4) - (w*0.0005);
+            var bal = ((twf/twr)*1.4) - (w*0.0005);
             return bal;
         }
 
@@ -100,7 +99,7 @@ $(document).ready(function() {
 
         // We put the equation in a function to make it more readable
         function calculateGrip(tc, twf, twr) {
-            var grip = ((twf+twr)*tc) * 0.006;
+            var grip = ((twf+twr) * (1+(tc*0.1))) * 0.006;
             return grip;
         }
 
