@@ -71,6 +71,10 @@ th {
     font-weight: 600;
 }
 
+.results {
+    text-align: right;
+}
+
 /**
  * Footer
  */

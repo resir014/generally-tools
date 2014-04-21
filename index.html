@@ -11,8 +11,6 @@
         <link rel="author" href="http://resir014.github.io/generally-tools/humans.txt" />
         <link rel="canonical" href="http://resir014.github.io/generally-tools/" />
 
-        <meta name="revisit-after" content="30" />
-
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
@@ -21,7 +19,7 @@
         <link rel="stylesheet" href="http://resir014.github.io/generally-tools/css/font-awesome.min.css" />
 
         <!-- Custom styles -->
-        <link rel="stylesheet" href="http://resir014.github.io/generally-tools/css/style.css" />
+        <link rel="stylesheet" href="http://resir014.github.io/generally-tools/css/style.min.css" />
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic" />
 
         <!--[if lt IE 9]>
@@ -100,10 +98,8 @@
                                     <option value="3">Road</option>
                                     <option value="4">Sport</option>
                                     <option value="5">Super</option>
-                                    <option value="6">Semi-Slick</option>
-                                    <option value="7">Racing Slick Hard</option>
-                                    <option value="8">Racng Slick Medium</option>
-                                    <option value="9">Racing Slick Soft</option>
+                                    <option value="6">Semi-Slicks</option>
+                                    <option value="7">Racing Slicks</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -126,7 +122,7 @@
                         <h3>How to use</h3>
                         <p class="help-block">First, enter the real-life attributes of your car. Then click the "Calculate physics" button and it will calculate the scaled GR physics, rounded down to two decimal places.</p>
                         <p class="help-block">A reference table for the Downforce values is available <a href="http://resir014.github.io/generally-tools/downforce-reference/" target="_blank">here</a>.</p>
-                        <p class="help-block">If you run into an issue, please file an issue report on GitHub or on the GRIF thread.</p>
+                        <p class="help-block">If you run into an issue, please file an <a href="https://github.com/resir014/generally-tools/issues" target="_blank">issue report on GitHub</a> or on the <a href="http://forum.generally-racers.com/viewtopic.php?f=8&t=4082" target="_blank">GRIF thread</a>.</p>
                     </div>
                 </div>
 
@@ -169,10 +165,7 @@
                                         <td>Mass</td> <td id="weight" class="results"></td>
                                     </tr>
                                     <tr>
-                                        <td>Balance(Max)</td> <td id="balanceMax" class="results"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Balance(Min)</td> <td id="balanceMin" class="results"></td>
+                                        <td>Balance</td> <td id="balance" class="results"></td>
                                     </tr>
                                 </tbody>
                             </table>

@@ -21,8 +21,8 @@
  *
  */
 
-$(document).ready(function () {
-    $("#calculate").click(function () {
+$(document).ready(function() {
+    $("#calculate").click(function() {
         /*
          * Define the input variables
          */
@@ -53,23 +53,20 @@ $(document).ready(function () {
         var vc = (v*0.277).toFixed(1);
 
         // Scaled weight.
-        var wc = (w/2).toFixed(1);
+        var wc = (w*0.6).toFixed(1);
 
         // Sliding (zero because it's useless as fuck)
         var s = (0).toFixed(1);
 
         // Balance
-        var balMax, balMin;
-        if (d=1) {
-            balMax = (0.8).toFixed(1);
-            balMin = (0.5).toFixed(1);
-        } else if (d=2) {
-            balMax = (0.9).toFixed(1);
-            balMin = (0.5).toFixed(1);
-        } else if (d=3) {
-            balMax = (0.9).toFixed(1);
-            balMin = (0.5).toFixed(1);
-        } else
+        var bal;
+        function balance(twf, twr, w) {
+            var tw = twf / twr;
+            var bal = ((tw)*1.4) - (w*0.0005);
+            return bal;
+        }
+
+        var bal = (balance(twf, twr, w)).toFixed(1);
 
         /*
          * Default grip variables.
@@ -96,15 +93,16 @@ $(document).ready(function () {
          * Required parameters:
          * 1) Front tyre's width (twf)
          * 2) Rear tyre's width (twr)
-         * 3) Compound from 1 to 9... (tc)
+         * 3) Compound from 1 to 7... (tc)
          *
          * The formula comes out like this:
-         * (0.7+(tc*0.1))+((twf+twr)*0.001)
+         * ((twf+twr)*tc) * 0.006
          */
 
         // We put the equation in a function to make it more readable
         function calculateGrip(tc, twf, twr) {
-            return (0.7+(tc*0.1))+((twf+twr)*0.001);
+            var grip = ((twf+twr)*tc) * 0.006;
+            return grip;
         }
 
         gripTarmac2 = (calculateGrip(tc, twf, twr)).toFixed(2);
@@ -237,8 +235,7 @@ $(document).ready(function () {
         $("#topSpeed").html(vc);
         $("#sliding").html(s);
         $("#weight").html(wc);
-        $("#balanceMax").html(balMax);
-        $("#balanceMin").html(balMin);
+        $("#balance").html(bal);
 
         // Calculated grip values
         $("#gripOil").html(gripOil);
