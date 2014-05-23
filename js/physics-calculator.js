@@ -5,7 +5,6 @@
  *
  * This source code is released under the MIT License.
  * See the LICENSE file for details.
- *
  */
 
 $(document).ready(function() {
@@ -81,7 +80,7 @@ $(document).ready(function() {
          * 3) Compound from 1 to 7... (tc)
          *
          * The formula comes out like this:
-         * ((twf+twr)*tc) * 0.006
+         * ((twf+twr) * (1+(tc*0.1))) * 0.006
          */
 
         // We put the equation in a function to make it more readable
