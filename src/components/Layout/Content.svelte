@@ -69,7 +69,7 @@
           <a
             class="drawer-link block px-4 py-2 rounded-md hover:bg-gray-100"
             aria-current={segment === undefined ? 'page' : undefined}
-            href="/">
+            href="/generally-tools">
             Physics Calculator
           </a>
         </li>
@@ -77,7 +77,7 @@
           <a
             class="drawer-link block px-4 py-2 rounded-md hover:bg-gray-100"
             aria-current={segment === 'about' ? 'page' : undefined}
-            href="/about">
+            href="/generally-tools/about">
             About
           </a>
         </li>

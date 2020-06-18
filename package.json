@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build",
-    "export": "sapper export",
-    "deploy": "gh-pages -d __sapper__/export",
+    "export": "sapper export --basepath generally-tools",
+    "deploy": "gh-pages -d __sapper__/export/generally-tools",
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
