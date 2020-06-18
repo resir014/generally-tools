@@ -49,7 +49,7 @@
 </style>
 
 <svelte:head>
-  <title>About</title>
+  <title>About | GeneRally Tools by resir014</title>
 </svelte:head>
 
 <Page>
@@ -76,7 +76,7 @@
         This is a series of web-based tools for the freeware top-down racing game GeneRally. No more installing stuff,
         no plugins required, just open your browser (desktop or mobile) and use it! It's also
         <a href="https://github.com/resir014/generally-tools" target="_blank" rel="noopener noreferrer">open-source</a>
-        so anyone can contribute to it. If you run into an issue, please file an bug report on
+        so anyone can contribute to it. If you run into an issue, or if you have any tool ideas, please file an issue on
         <a href="https://github.com/resir014/generally-tools/issues" target="_blank" rel="noopener noreferrer">
           GitHub
         </a>
