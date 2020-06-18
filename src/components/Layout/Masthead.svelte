@@ -56,6 +56,6 @@
     </h1>
   </div>
   <div class="right ml-4">
-    <button class="inline-flex items-center justify-center w-8 h-8" type="button" on:click={toggleDrawer}><img src="/images/menu.svg" alt="Toggle drawer" /></button>
+    <button class="inline-flex items-center justify-center w-8 h-8" type="button" on:click={toggleDrawer}><img src="/generally-tools/images/menu.svg" alt="Toggle drawer" /></button>
   </div>
 </header>
