@@ -1,10 +1,10 @@
 {
 	"background_color": "#ffffff",
 	"theme_color": "#333333",
-	"name": "TODO",
-	"short_name": "TODO",
+	"name": "GeneRally Tools",
+	"short_name": "GeneRally Tools",
 	"display": "minimal-ui",
-	"start_url": "/",
+	"start_url": "/generally-tools/",
 	"icons": [
 		{
 			"src": "logo-192.png",
